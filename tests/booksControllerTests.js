@@ -21,9 +21,9 @@ describe('Book Controller Tests:', () => {
 
       const controller = bookController(Book);
       controller.post(req, res);
-      
+
       res.status.calledWith(400).should.equal(true, `Bad Status ${res.status.args[0][0]}`); 
-      res.send.calledWith('Title is Required').should.equal(true);   
+      res.send.calledWith('Title is required').should.equal(true);   
     });
   });
 });
